@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.GuideSignInPage"
+             Title="Login Guide"
+            BackgroundImage="Assets/back_map2.jpg">
+
+  <ContentPage.Padding>
+
+    <OnPlatform x:TypeArguments="Thickness"
+                 iOS="0, 0, 0, 0"
+                 Android="0, 0, 0, 0"
+                 WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+
+
+   
+      
+    <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="16">
+      <Entry x:Name="email" Placeholder="Email" FontSize="20" TextColor="#4D6269" PlaceholderColor="#80A7AD"  HorizontalOptions="CenterAndExpand" WidthRequest="320"/>
+      <Entry x:Name="password" Placeholder="Password" IsPassword="True" FontSize="20" TextColor="#4D6269" PlaceholderColor="#80A7AD" HorizontalOptions="CenterAndExpand" WidthRequest="320"/>
+      <Label x:Name="messageLabel" HorizontalOptions="CenterAndExpand"/>
+      <Button x:Name="btnSignIn" Text="Sign In" FontSize="23"  TextColor="#FFFFFF" BackgroundColor="#F06560" HorizontalOptions="CenterAndExpand" WidthRequest="300"  Clicked="ButtonSinIn_OnClicked"/>
+
+   
+  
+      <Grid x:Name="Delete_User" >
+        <StackLayout HorizontalOptions="CenterAndExpand">
+          <Label Text="No account yet? Create one" TextColor="#4D6269" FontSize="15" />
+        </StackLayout>
+
+
+        <Grid.GestureRecognizers>
+
+          <TapGestureRecognizer Tapped="ButtonCreatAccount_OnClicked"/>
+        </Grid.GestureRecognizers>
+
+      </Grid>
+
+
+    </StackLayout>
+
+
+
+
+  </ContentPage.Content>
+</ContentPage>

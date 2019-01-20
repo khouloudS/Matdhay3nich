@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Settings_Guide"
+             Title="Settings"
+            BackgroundColor="#F2EDE8">
+  <ContentPage.Padding>
+
+    <OnPlatform x:TypeArguments="Thickness"
+                 iOS="0, 0, 0, 0"
+                 Android="0, 0, 0, 0"
+                 WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Padding="20, 20, 20, 20"
+                     Spacing="16"
+                     >
+          <TableView Intent="Settings">
+            <TableRoot>
+              <TableSection>
+         
+                <TextCell Text="Delete user" Tapped="Delete_User_Tapped" TextColor="#4D6269"/>
+                <TextCell Text="Setting profile" Tapped="Setting_Guide_Tapped" TextColor="#4D6269"/>
+                <TextCell Text="Sign out" Tapped="Sign_out_Tapped" TextColor="#4D6269"/>
+              </TableSection>
+            </TableRoot>
+          </TableView>
+
+
+
+
+        </StackLayout>
+
+      </StackLayout>
+
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

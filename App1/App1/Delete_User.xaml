@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Delete_User"
+             Title="Delete user"
+            BackgroundColor="#F2EDE8">
+
+  <ContentPage.Padding>
+
+    <OnPlatform x:TypeArguments="Thickness"
+                 iOS="0, 0, 0, 0"
+                 Android="0, 0, 0, 0"
+                 WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <StackLayout >
+    
+  
+     <SearchBar x:Name="Search_Delete_User"
+              SearchButtonPressed="Search_Delete_User_Button"
+              Placeholder="Search"
+             TextColor="#4D6269" PlaceholderColor="#80A7AD"/>
+      <ListView x:Name="MainListView"
+            HasUnevenRows="True">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.ContextActions>
+
+                <MenuItem Text="Delete" Clicked="Delete_Clicked"/>
+
+              </ViewCell.ContextActions>
+              <Grid>
+                <Label Text="{Binding}"
+                       TextColor="#4D6269"
+                       FontSize="25"/>
+              </Grid>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+
+      </ListView>
+    </StackLayout>
+
+  </ContentPage.Content>
+</ContentPage>

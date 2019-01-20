@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.chooseguide"
+   BackgroundColor="#F2EDE8">
+   
+     
+ <ListView  x:Name="MainListView">
+   <ListView.ItemTemplate>
+     <DataTemplate>
+       <ViewCell>
+
+         <StackLayout Orientation="Horizontal">
+           
+         <Label Text="{Binding FirstName}"
+                 HorizontalOptions="CenterAndExpand"
+                    WidthRequest="320"  FontSize="18"
+                    Font="Bold" TextColor="#80A7AD"/>
+         <Label Text="{Binding LastName}"
+                 HorizontalOptions="CenterAndExpand"
+                    WidthRequest="320"  FontSize="18"
+                    Font="Bold" TextColor="#80A7AD"/>
+         
+         </StackLayout>
+
+       </ViewCell>
+     </DataTemplate>
+   </ListView.ItemTemplate>
+ </ListView>
+</ContentPage>

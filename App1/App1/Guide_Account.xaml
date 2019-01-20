@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Guide_Account"
+             Title="Create guide account"
+             BackgroundColor="#F2EDE8">
+  <ContentPage.Padding>
+
+    <OnPlatform x:TypeArguments="Thickness"
+                 iOS="0, 0, 0, 0"
+                 Android="0, 0, 0, 0"
+                 WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+
+
+
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout >
+        <StackLayout VerticalOptions="FillAndExpand"
+                     Padding="0,0,0,200"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Vertical"
+                    BackgroundColor="#F06560" >
+
+          <!--PHOTO DE PROFILE-->
+          <StackLayout
+       BackgroundColor="Transparent"
+       WidthRequest="200"
+       HorizontalOptions="Center"
+          >
+           
+            <Button
+                       Text="Importer une photo"
+                       HorizontalOptions="CenterAndExpand"
+                       Clicked="ImpoterPhoto_OnClicked"
+                       HeightRequest="40"
+                       BackgroundColor="Transparent"
+                       BorderColor="Transparent"/>
+
+            <Button
+                    Text="Prendre une photo"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="40"
+                    Clicked="PrendrePhoto_OnClicked"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"/>
+
+            <Image x:Name="MainImage"/>
+          </StackLayout>
+
+
+
+
+
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical"  >
+
+            <StackLayout VerticalOptions="Center"
+                       HorizontalOptions="FillAndExpand"
+                       Orientation="Vertical"
+                       Padding="20, 20, 20, 20"
+                       Spacing="16">
+
+
+              <Entry x:Name="FirstName" Placeholder="First Name" TextColor="#4D6269" PlaceholderColor="#80A7AD" HorizontalOptions="CenterAndExpand" WidthRequest="320"  Keyboard="Text" />
+              <Entry x:Name="LastName" Placeholder="Last Name" TextColor="#4D6269" PlaceholderColor="#80A7AD" HorizontalOptions="CenterAndExpand" WidthRequest="320"  Keyboard="Text" />
+
+              <Entry x:Name="Phone" Placeholder="Phone" TextColor="#4D6269" PlaceholderColor="#80A7AD" HorizontalOptions="CenterAndExpand" WidthRequest="320" Keyboard="Telephone" />
+              <Entry x:Name="Email" Placeholder="Email" TextColor="#4D6269" PlaceholderColor="#80A7AD" HorizontalOptions="CenterAndExpand" WidthRequest="320" Keyboard="Email" />
+              <Entry x:Name="Password" Placeholder="Password" IsPassword="True" TextColor="#4D6269" PlaceholderColor="#80A7AD" HorizontalOptions="CenterAndExpand" WidthRequest="320" />
+
+
+
+              <Button x:Name="btnSignUp" Text="Sign Up" FontSize="23"  TextColor="#EABDA3" BackgroundColor="#F06560"  HorizontalOptions="CenterAndExpand" WidthRequest="250"  Clicked="ButtonSinIn_OnClicked"/>
+              <Button x:Name="btnCancel" Text="Cancel" FontSize="23" TextColor="#F06560" BackgroundColor="#EABDA3" HorizontalOptions="CenterAndExpand" WidthRequest="250"    BorderWidth="1" Clicked="ButtonCancel_OnClicked"/>
+
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+      
+    </ScrollView>
+  </ContentPage.Content >
+</ContentPage>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.SettingGuideProfile"
+             Title="Setting profile"
+  BackgroundColor="#F2EDE8">
+  <ContentPage.Padding>
+
+    <OnPlatform x:TypeArguments="Thickness"
+                 iOS="0, 0, 0, 0"
+                 Android="0, 0, 0, 0"
+                 WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+
+  <ContentPage.Content>
+    <!--Ajouter CANCEL DONE dans Action bar-->
+    <ScrollView>
+      <StackLayout >
+        <StackLayout VerticalOptions="FillAndExpand"
+                     Padding="0,0,0,200"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Vertical"
+                    BackgroundColor="#F06560" >
+         
+          <!--PHOTO DE PROFILE-->
+
+          <Grid Grid.Row="1"
+      BackgroundColor="Transparent"
+      WidthRequest="450"
+      HorizontalOptions="Center"
+          >
+            <Image x:Name="MainImage"/>
+
+          </Grid>
+
+          <Button
+            Text="Importer une photo"
+            HorizontalOptions="End"
+            Clicked="ImpoterPhoto_OnClicked"
+            HeightRequest="40"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent"/>
+
+          <Button
+                  Text="Prendre une photo"
+                  HorizontalOptions="Start"
+                  HeightRequest="40"
+                  Clicked="PrendrePhoto_OnClicked"
+                  BackgroundColor="Transparent"
+                  BorderColor="Transparent"/>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical"   >
+
+          <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Padding="20, 20, 20, 20"
+                     Spacing="16"
+                      >
+
+            <Label x:Name="LabelFirstName" HorizontalOptions="CenterAndExpand" WidthRequest="320" Text="First Name" FontSize="18" Font="Bold" TextColor="#80A7AD" />
+            <Entry x:Name="FirstName" TextColor="#4D6269"  HorizontalOptions="CenterAndExpand" WidthRequest="320"/>
+
+            <Label x:Name="LabelLastName" HorizontalOptions="CenterAndExpand" WidthRequest="320" Text="Last Name" FontSize="18" Font="Bold" TextColor="#80A7AD"/>
+            <Entry x:Name="LastName"  TextColor="#4D6269"  HorizontalOptions="CenterAndExpand" WidthRequest="320" Keyboard="Text" />
+
+           
+            <Label x:Name="LabelPhone" HorizontalOptions="CenterAndExpand" WidthRequest="320" Text="Phone" FontSize="18" Font="Bold" TextColor="#80A7AD"/>
+            <Entry x:Name="Phone"  TextColor="#4D6269"  HorizontalOptions="CenterAndExpand" WidthRequest="320" Keyboard="Telephone" />
+
+            <Label x:Name="LabelEmail" HorizontalOptions="CenterAndExpand" WidthRequest="320" Text="Email" FontSize="18" Font="Bold" TextColor="#80A7AD"/>
+            <Entry x:Name="Email"  TextColor="#4D6269"   HorizontalOptions="CenterAndExpand" WidthRequest="320" Keyboard="Email"/>
+
+           
+            <Label x:Name="LabelPassword" HorizontalOptions="CenterAndExpand" WidthRequest="320" Text="Password" FontSize="18" Font="Bold" TextColor="#80A7AD"/>
+            <Entry x:Name="Password"  IsPassword="True" TextColor="#4D6269"   HorizontalOptions="CenterAndExpand" WidthRequest="320" />
+            
+
+
+            <StackLayout
+           Orientation="Horizontal"
+           HorizontalOptions="CenterAndExpand"
+           Spacing="30">
+              <Button
+                 x:Name="buttonCancel"
+                 Text="Cancel"
+                 TextColor="#F06560" BackgroundColor="#EABDA3"
+                 Clicked="buttonCancel_Clicked"
+                 BorderRadius="27"
+                 BorderColor="White"
+                 BorderWidth="2"
+                 HeightRequest="40"
+                 WidthRequest="150"/>
+              <Button
+                 x:Name="buttonSave"
+                 Text="Save"
+                
+                   TextColor="#EABDA3" BackgroundColor="#F06560"
+                 BorderRadius="27"
+                 HeightRequest="40"
+                 WidthRequest="150"/>
+            </StackLayout>
+
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content >
+</ContentPage>

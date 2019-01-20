@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Calendrier_User"
+             Title="Calendar"
+            BackgroundColor="#F2EDE8">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                 iOS="0, 0, 0, 0"
+                 Android="0, 0, 0, 0"
+                 WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content Title="View all" >
+    <StackLayout Spacing="20" Padding="20"
+                 VerticalOptions="Center">
+      <ListView x:Name="Mainlist"
+                   HasUnevenRows="True">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout>
+                <Label  Text="{Binding Title}"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="320"  FontSize="18"
+                        Font="Bold" TextColor="#80A7AD"/>
+                <Label  Text="{Binding Date}"
+                        HorizontalOptions="CenterAndExpand"
+                    WidthRequest="320"  FontSize="18"
+                    Font="Bold" TextColor="#80A7AD"/>
+                <Label  Text="{Binding Editor}"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="320"  FontSize="18"
+                        TextColor="#4D6269"/>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+</ContentPage>

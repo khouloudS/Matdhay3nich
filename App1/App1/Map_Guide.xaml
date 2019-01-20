@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             Title="Guide Map"
+             x:Class="App1.Map_Guide"
+             BackgroundColor="#F2EDE8">
+
+  <ContentPage.ToolbarItems>
+
+
+
+    <ToolbarItem  Name="Settings"  Clicked="Settings_Guide" Icon="Assets/ic_settings_white_36dp.png"/>
+    <ToolbarItem  Name="Calendar"  Clicked="Calendar_Guide" Icon="Assets/ic_date_range_white_36dp.png"/>
+    <ToolbarItem  Name="user" Clicked="user"  Icon="Assets/ic_view_list_white_36dp.png"/>
+  </ContentPage.ToolbarItems>
+
+  <StackLayout>
+    <maps:Map
+        x:Name="MyMap"
+       IsShowingUser="True"
+        
+        />
+  </StackLayout>
+
+
+
+
+
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:local="clr-namespace:App1;assembly=App1"
+             Title="User Map"
+             x:Class="App1.Map_User"
+             BackgroundColor="#F2EDE8">
+  <ContentPage.ToolbarItems>
+
+    <ToolbarItem  Name="Settings"  Clicked="Settings_User" Icon="Assets/ic_settings_white_36dp.png"/>
+    <ToolbarItem  Name="Calendar"  Clicked="Calendar_User" Icon="Assets/ic_date_range_white_36dp.png"/>
+    <ToolbarItem  Name="Call Guide" Clicked="Call_Guide" Icon="Assets/ic_phone_white_36dp.png"/>
+  </ContentPage.ToolbarItems>
+
+  <StackLayout>
+    <maps:Map
+     
+         x:Name="MyMap"
+       IsShowingUser="False"
+        />
+
+  </StackLayout>
+</ContentPage>

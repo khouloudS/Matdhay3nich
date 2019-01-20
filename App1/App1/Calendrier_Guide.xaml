@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Calendrier_Guide"
+            Title="Calendar"
+           BackgroundColor="#F2EDE8">
+  <TabbedPage.Padding>
+
+    <OnPlatform x:TypeArguments="Thickness"
+                 iOS="0, 0, 0, 0"
+                 Android="0, 0, 0, 0"
+                 WinPhone="0, 0, 0, 0" />
+  </TabbedPage.Padding>
+  <TabbedPage.Children>
+    <ContentPage Title="View all" >
+      <StackLayout Spacing="20" Padding="20"
+                   VerticalOptions="Center">
+        <ListView x:Name="Mainlist"
+                   HasUnevenRows="True">
+          <Label  Text="{Binding Title_Entry}"
+                   HorizontalOptions="CenterAndExpand"
+                   WidthRequest="320"  FontSize="18"
+                   Font="Bold" TextColor="#80A7AD"/>
+          <Label  Text="{Binding Note_Editor}"
+                  HorizontalOptions="CenterAndExpand"
+                  WidthRequest="320"  FontSize="18"
+                  Font="Bold" TextColor="#80A7AD"/>
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout>
+              <Label  Text="{Binding Title}"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="320"  FontSize="18"
+                        Font="Bold" TextColor="#80A7AD"/>
+                <Label  Text="{Binding Date}"
+                        HorizontalOptions="CenterAndExpand"
+                    WidthRequest="320"  FontSize="18"
+                    Font="Bold" TextColor="#80A7AD"/>
+                <Label  Text="{Binding Editor}"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="320"  FontSize="18"
+                        TextColor="#4D6269"/>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+
+      </ListView>
+      </StackLayout>
+    </ContentPage>
+    <ContentPage Title="New date">
+
+
+
+      <StackLayout Orientation="Vertical"  >
+
+        <StackLayout VerticalOptions="Center"
+                   HorizontalOptions="FillAndExpand"
+                   Orientation="Vertical"
+                   Padding="20, 20, 20, 20"
+                   Spacing="16">
+          <Entry x:Name="Title_Entry" Placeholder="Title" TextColor="#4D6269" PlaceholderColor="#80A7AD" HorizontalOptions="CenterAndExpand" WidthRequest="320" FontSize="18"  Keyboard="Text" />
+          <DatePicker HorizontalOptions="CenterAndExpand" WidthRequest="320" x:Name="date"/>
+          <Label x:Name="Note_Label" HorizontalOptions="CenterAndExpand" WidthRequest="320" Text="Note" FontSize="18" TextColor="#80A7AD" />
+          <Editor x:Name="Note_Editor" TextColor="#4D6269"  HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="320" FontSize="18"  Keyboard="Text" />
+        </StackLayout>
+
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="CenterAndExpand"
+            Spacing="30">
+          <Button
+             x:Name="buttonCancel"
+             Text="Cancel"
+             TextColor="#F06560" BackgroundColor="#EABDA3"
+         
+             BorderRadius="27"
+             BorderColor="White"
+             BorderWidth="2"
+             HeightRequest="40"
+             WidthRequest="150"
+             />
+          <Button
+             x:Name="Enregister"
+             Text="Done"
+            
+             TextColor="#EABDA3" BackgroundColor="#F06560"
+             BorderRadius="27"
+             HeightRequest="40"
+             WidthRequest="150"
+             Clicked="Enregister_Button"/>
+        </StackLayout>
+      </StackLayout >
+    </ContentPage>
+  </TabbedPage.Children>
+</TabbedPage>

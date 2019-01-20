@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Creat_Account_Guide_User"
+             
+             Title="Create your account">
+
+    <ContentPage.Padding>
+
+      <OnPlatform x:TypeArguments="Thickness"
+                   iOS="0, 0, 0, 0"
+                   Android="0, 0, 0, 0"
+                   WinPhone="0, 0, 0, 0" />
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+      <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+               
+                 Spacing="16">
+                                                                                        
+        <Button x:Name="btnguide" Text="Creat a guide account" FontSize="23"  TextColor="#FFF168" HorizontalOptions="CenterAndExpand" WidthRequest="300" Clicked="ButtonGuide_OnClicked"/>
+        <Button x:Name="btnuser" Text="Creat a user account" FontSize="23"  TextColor="#FFF168" HorizontalOptions="CenterAndExpand" WidthRequest="300" Clicked="ButtonUser_OnClicked"/>
+        <Button x:Name="btnCancel" Text="Cancel" FontSize="23"  TextColor="#DB0B32" HorizontalOptions="CenterAndExpand" WidthRequest="250"    BorderWidth="1" Clicked="ButtonCancel_OnClicked"/>
+      </StackLayout>
+    </ContentPage.Content>
+ 
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.ChoosePage" 
+             Title="Choose your account"
+              BackgroundImage="Assets/back_map.jpg">
+
+  <ContentPage.Padding>
+
+    <OnPlatform x:TypeArguments="Thickness"
+                 iOS="0, 0, 0, 0"
+                 Android="0, 0, 0, 0"
+                 WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="Center"
+               HorizontalOptions="FillAndExpand"
+               Orientation="Vertical"
+               
+               Spacing="16">
+
+      <Button x:Name="btnGuideSignUp" Text="Sign in as guide" FontSize="23"   TextColor="#EABDA3" BackgroundColor="#F06560" HorizontalOptions="CenterAndExpand" WidthRequest="300" Clicked="OnGuideSingUpButtonClicked"/>
+      <Button  x:Name="btnUserSignUp" Text="Sign in as simple user" FontSize="23"  TextColor="#F06560" BackgroundColor="#EABDA3" HorizontalOptions="CenterAndExpand" WidthRequest="300" Clicked="OnUserSignUpButtonClicked"/>
+   
+    </StackLayout>
+  </ContentPage.Content>
+
+</ContentPage>
